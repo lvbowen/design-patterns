@@ -2,21 +2,12 @@ import React, { useEffect } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import "./test/decorator";
-
+import Target from './components/target';
+ 
 function App() {
 
   useEffect(() => {
-    // 创建一个主题对象（Subject）
-    const button = document.getElementById('myButton');
-
-    // 创建观察者（Observer）
-    const handleClick = () => {
-      console.log('按钮被点击了！')
-    }
-
-    // 将观察者订阅到主题上
-    button.addEventListener('click', handleClick);
-    button.addEventListener('click', () => {});
+    
   }, [])
 
 
@@ -25,6 +16,10 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
          <button id='myButton'>按钮111</button>
+        <br />
+        {/* 目标组件 */}
+        <Target title="目标组件" />
+
         {/* <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
